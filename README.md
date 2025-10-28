@@ -32,8 +32,8 @@ This is a real-time chat application built with Flask, Flask-SocketIO, and Flask
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/Hashah2311/chat.git
+    cd chat
     ```
 
 2.  **Create a virtual environment:**
