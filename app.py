@@ -1,5 +1,3 @@
-import eventlet
-eventlet.monkey_patch()
 from flask import Flask, render_template, request, jsonify, send_from_directory, redirect, url_for, flash
 from functools import wraps
 from flask_socketio import SocketIO, emit, join_room, leave_room
@@ -79,9 +77,10 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        remember = True if request.form.get('remember') else False
         user = User.query.filter_by(username=username).first()
         if user and user.check_password(password):
-            login_user(user)
+            login_user(user, remember=remember)
             return redirect(url_for('index'))
         else:
             flash('Invalid username or password')

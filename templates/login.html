@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Login - Flask Chat</title>
+		<title>Login - HaS Chat</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}">
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body class="bg-gray-900 flex items-center justify-center h-screen">
@@ -46,6 +47,12 @@
 						name="password"
 						class="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-gray-100 mb-3 leading-tight focus:outline-none focus:shadow-outline"
 						required />
+				</div>
+				<div class="mb-6">
+					<label class="flex items-center">
+						<input type="checkbox" name="remember" class="form-checkbox h-5 w-5 text-blue-600">
+						<span class="ml-2 text-gray-300">Remember me</span>
+					</label>
 				</div>
 				<div class="flex items-center justify-between">
 					<button
